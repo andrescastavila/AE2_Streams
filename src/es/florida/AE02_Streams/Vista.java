@@ -52,12 +52,12 @@ public class Vista {
 		frame.getContentPane().setLayout(null);
 		
 		textField_Buscar = new JTextField();
-		textField_Buscar.setBounds(10, 10, 594, 167);
+		textField_Buscar.setBounds(10, 198, 146, 30);
 		frame.getContentPane().add(textField_Buscar);
 		textField_Buscar.setColumns(10);
 		
 		textField_Reemplazar = new JTextField();
-		textField_Reemplazar.setBounds(10, 256, 594, 152);
+		textField_Reemplazar.setBounds(294, 198, 146, 30);
 		frame.getContentPane().add(textField_Reemplazar);
 		textField_Reemplazar.setColumns(10);
 		
@@ -69,19 +69,21 @@ public class Vista {
 		btnReemplazar.setBounds(450, 202, 85, 21);
 		frame.getContentPane().add(btnReemplazar);
 		
-		textArea_Original = new JTextArea();
-		textArea_Original.setBounds(31, 200, 125, 22);
-		frame.getContentPane().add(textArea_Original);
-		
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(297, 202, 125, 21);
+		scrollPane.setBounds(10, 287, 594, 107);
 		frame.getContentPane().add(scrollPane);
 		
 		textArea_Modificado = new JTextArea();
-		textArea_Modificado.setBounds(315, 200, 125, 22);
-		scrollPane.setColumnHeaderView(textArea_Modificado);
+		scrollPane.setViewportView(textArea_Modificado);
 		scrollPane.getViewport().setView(textArea_Modificado);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(10, 10, 594, 152);
+		frame.getContentPane().add(scrollPane_1);
+		
+		textArea_Original = new JTextArea();
+		scrollPane_1.setViewportView(textArea_Original);
 		
 		frame.setVisible(true);
 	}
